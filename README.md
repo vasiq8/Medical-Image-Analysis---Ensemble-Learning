@@ -23,7 +23,7 @@ Validating gastrointestinal diseases from endoscopic images using deep learning 
 
 ## Overview
 
-This project applies ensemble learning techniques to classify gastrointestinal diseases from endoscopic images using the Kvasir v2 dataset. Four pre-trained deep learning models were fine-tuned and combined using weighted averaging to achieve superior classification accuracy compared to individual models[file:4].
+This project applies ensemble learning techniques to classify gastrointestinal diseases from endoscopic images using the Kvasir v2 dataset. Four pre-trained deep learning models were fine-tuned and combined using weighted averaging to achieve superior classification accuracy compared to individual models.
 
 ---
 
@@ -35,7 +35,7 @@ Manual examination of gastrointestinal endoscopic images is time-consuming and p
 - Limited generalization to new image variations
 - Sensitivity to lighting and image quality issues
 
-These limitations can lead to delayed diagnosis and impact patient treatment outcomes[file:4].
+These limitations can lead to delayed diagnosis and impact patient treatment outcomes.
 
 ---
 
@@ -45,7 +45,7 @@ These limitations can lead to delayed diagnosis and impact patient treatment out
 - Fine-tune multiple pre-trained CNN architectures for medical image classification
 - Apply ensemble learning to combine predictions from multiple models
 - Achieve higher classification accuracy than any individual model
-- Ensure consistent performance across all eight disease classes[file:4]
+- Ensure consistent performance across all eight disease classes
 
 ---
 
@@ -64,8 +64,6 @@ The project uses the Kvasir v2 dataset containing gastrointestinal endoscopic im
 | Polyps | Abnormal tissue growths |
 | Ulcerative-Colitis | Inflammatory bowel disease |
 
-[file:4]
-
 ---
 
 ## Tools and Technologies
@@ -77,13 +75,6 @@ The project uses the Kvasir v2 dataset containing gastrointestinal endoscopic im
 - Data augmentation libraries
 - Jupyter Notebook
 
-[file:4]
-
----
-
-## Project Structure
-
-
 ---
 
 ## Methodology
@@ -93,7 +84,7 @@ The project uses the Kvasir v2 dataset containing gastrointestinal endoscopic im
 3. **Model Fine-Tuning**: Replaced top layers with custom dense layers, batch normalization, and dropout for the specific classification task
 4. **Individual Training**: Trained each model separately on the augmented dataset
 5. **Ensemble Creation**: Combined predictions using weighted averaging based on individual model accuracies
-6. **Evaluation**: Assessed performance using accuracy metrics and confusion matrices[file:4]
+6. **Evaluation**: Assessed performance using accuracy metrics and confusion matrices
 
 ---
 
@@ -102,22 +93,22 @@ The project uses the Kvasir v2 dataset containing gastrointestinal endoscopic im
 ### InceptionV3
 - 48 convolutional layers with inception modules
 - Efficient feature extraction through multi-scale convolutions
-- Accuracy: 93.51%[file:4]
+- Accuracy: 93.51%
 
 ### VGG16
 - 13 convolutional layers with simple, consistent architecture
 - Strong feature learning through deep stacked convolutions
-- Accuracy: 94.58%[file:4]
+- Accuracy: 94.58%
 
 ### ResNet50
 - 50 convolutional layers with skip connections
 - Addresses vanishing gradient problem in deep networks
-- Accuracy: 94.73%[file:4]
+- Accuracy: 94.73%
 
 ### MobileNetV2
 - 17 convolutional layers optimized for efficiency
 - Uses depthwise separable convolutions
-- Accuracy: 88.80%[file:4]
+- Accuracy: 88.80%
 
 ---
 
@@ -131,7 +122,7 @@ Where weight for each model is:
 
 w(i) = accuracy(i) / (accuracy1 + accuracy2 + accuracy3 + accuracy4)
 
-This approach ensures that higher-performing models contribute more to the final prediction, leading to improved overall accuracy[file:4].
+This approach ensures that higher-performing models contribute more to the final prediction, leading to improved overall accuracy.
 
 ---
 
@@ -147,13 +138,13 @@ This approach ensures that higher-performing models contribute more to the final
 | ResNet50 | 94.73% |
 | **Ensemble Model** | **98.15%** |
 
-[file:4][attached_image:1]
+The ensemble model outperformed all individual models, demonstrating the effectiveness of combining multiple architectures for medical image classification.
 
-The ensemble model outperformed all individual models, demonstrating the effectiveness of combining multiple architectures for medical image classification[file:4].
+### Model Performance Comparison
 
-### Performance Visualization
+![Model Performance](results/visualizations/model_performance_comparison.png)
 
-The bar chart comparing model accuracies shows that the ensemble approach achieved 98.15% accuracy, significantly higher than the best individual model (ResNet50 at 94.73%)[attached_image:1].
+The bar chart illustrates the accuracy comparison between individual models and the ensemble approach. The ensemble model achieved 98.15% accuracy, significantly outperforming the best individual model (ResNet50 at 94.73%) by 3.42 percentage points.
 
 ---
 
@@ -164,28 +155,25 @@ The bar chart comparing model accuracies shows that the ensemble approach achiev
 - MobileNetV2 showed lower accuracy (88.80%) but contributed valuable predictions for specific disease classes
 - Ensemble learning successfully addressed individual model weaknesses in classifying difficult cases such as esophagitis and normal z-line
 - Data augmentation techniques significantly improved model generalization across all architectures
-- The weighted averaging approach effectively leveraged the strengths of each model while minimizing their individual limitations[file:4][attached_image:1]
+- The weighted averaging approach effectively leveraged the strengths of each model while minimizing their individual limitations
 
 ---
 
 ## How to Use This Project
 
-1. **Clone the repository:**
-git clone https://github.com/vasiq8/ensemble-learning-gi-classification.git
+1. Clone the repository:
+git clone https://github.com/vasiq8/Medical-Image-Analysis—Ensemble-Learning.git
 
-2. **Install required dependencies:**
+2. Install required dependencies:
 pip install tensorflow keras numpy pandas matplotlib scikit-learn
 
-3. **Download the Kvasir v2 dataset** from Kaggle and place it in the `data/kvasir-v2/` directory
+3. Download the Kvasir v2 dataset from Kaggle and place it in the data directory
 
-4. **Run the preprocessing notebook:**
-jupyter notebook notebooks/data_preprocessing.ipynb
+4. Run the preprocessing notebook to prepare the data
 
-5. **Train individual models:**
-jupyter notebook notebooks/model_training.ipynb
+5. Train individual models using the training scripts
 
-6. **Evaluate ensemble performance:**
-jupyter notebook notebooks/ensemble_evaluation.ipynb
+6. Evaluate ensemble performance using the evaluation notebook
 
 ---
 
@@ -196,7 +184,7 @@ jupyter notebook notebooks/ensemble_evaluation.ipynb
 - Implement attention mechanisms to identify critical regions in medical images
 - Deploy the ensemble model as a web application for real-time disease classification
 - Conduct clinical validation studies to assess real-world diagnostic performance
-- Explore explainable AI techniques to provide interpretable predictions for medical professionals[file:4]
+- Explore explainable AI techniques to provide interpretable predictions for medical professionals
 
 ---
 
@@ -205,13 +193,9 @@ jupyter notebook notebooks/ensemble_evaluation.ipynb
 **Vasiq**  
 Email: vasiq.8@gmail.com  
 Phone: 8385898989  
-LinkedIn: [linkedin.com/in/vasiq8](https://linkedin.com/in/vasiq8)  
-GitHub: [github.com/vasiq8](https://github.com/vasiq8)
 
-Academic Project | B.Tech Data Science and AI  
+Academic Project - B.Tech Data Science and AI  
 ICFAI University Hyderabad  
 Supervisor: Dr. Priyanka Parimi
 
----
 
-**Project Repository**: [github.com/vasiq8/ensemble-learning-gi-classification](https://github.com/vasiq8/ensemble-learning-gi-classification)
